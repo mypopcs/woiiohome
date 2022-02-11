@@ -18,3 +18,5 @@ webRequestBlocking —— 扩展程序以阻止方式使用chrome.webRequest API
 使用browser_action 可以在Google Chrome 浏览器主窗口地址栏右侧的工具栏中添加图标
 ## chrome_url_overrides
 可以让开发者定制页面:bookmarks - 收藏夹，history - 历史记录，newtab - 新 tab 页
+## content_security_policy
+解决因为拒绝加载脚本，因为它违反了以下内容安全策略指令而无法访问网址的问题

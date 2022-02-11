@@ -32,8 +32,7 @@
        "default_icon":"images/64.png"
     },
     "web_accessible_resources":[
-       "https://code.jquery.com/jquery-3.4.1.min.js",
-       "https://api.rss2json.com/v1/api.json?rss_url=",
        "https://fonts.googleapis.com/icon?family=Material+Icons"
-    ]
+    ],
+    "content_security_policy": "default-src 'self'; media-src *; script-src 'self'  https://api.rss2json.com; connect-src *; style-src * 'unsafe-inline' 'self' blob:; font-src *; img-src * data:;"
 }
