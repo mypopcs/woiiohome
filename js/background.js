@@ -1,31 +1,13 @@
-document.getElementById("gotoFeedButton").addEventListener('click', handleGotoFeed);
-let userFeedURLs = [];
-
-function handleGotoFeed() {
-    addFeedURL(document.getElementById("input").value);
-    if (userFeedURLs.length == 0) {
-        alert("You haven't entered any RSS feeds");
-        return;
+import feedHandler from "./feed.js"
+class newTab {
+    initHandle(){
+        const doc = $(document.body)
+        doc.on('click', '#gotoFeedButton', () => feedHandler.handleGotoFeed())
     }
-    localStorage.setItem('userFeedURLs', userFeedURLs);
-    // window.location.href = 'feed.html';
-}
-
-function addFeedURL(url) {
-    RemoveHtmlTagsFromURL(url);
-    if (url == "") {
-        alert("Please enter a RSS URL!")
-        return;
+    //总入口
+    init(){
+        this.initHandle()
     }
-    userFeedURLs.push(url);
-    document.getElementById("input").value = "";
-
-    var listElement = "<li class=\"list-group-item border border-dark bg-white\"><h5>" + url + "</h5></li>"
-    console.log(listElement);
-    // document.getElementById("urlList").insertAdjacentHTML('beforeend', listElement)
 }
-
-
-function RemoveHtmlTagsFromURL(url) {
-    return url.replace(/(<([^>]+)>)/ig, "");
-}
+var index = new newTab;
+index.init()
