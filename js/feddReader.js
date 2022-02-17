@@ -2,6 +2,7 @@ import dataHandler from "./data.js";
 const API = "https://api.rss2json.com/v1/api.json?rss_url=";
 let urlFeed = dataHandler.getData('userFeedURLs');
 console.log(urlFeed)
+
 // urlFeed = urlFeed.split(",")
 // urlFeed.forEach(userUrl => {
 //     $.ajax({
