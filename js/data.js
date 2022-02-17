@@ -4,9 +4,10 @@ class dataHandle {
         localStorage.setItem(key, JSON.stringify(val))
     }
     getData(key){
-        console.log(key)
         return JSON.parse(localStorage.getItem(key));
-        console.log('12')
+    }
+    clearData(){
+        localStorage.clear()
     }
 }
 const datahander = new dataHandle()
