@@ -2,7 +2,7 @@ import feedHandler from "./feed.js"
 class newTab {
     initHandle(){
         const doc = $(document.body)
-        doc.on('click', '#gotoFeedButton', () => feedHandler.saveFeedHandle())
+        doc.on('click', '#gotoFeedButton', () => feedHandler.saveFeed())
     }
     //总入口
     init(){
