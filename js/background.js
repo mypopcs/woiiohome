@@ -1,4 +1,5 @@
 import feedHandler from "./feed.js"
+import datahander from "./data.js"
 class newTab {
     initHandle(){
         const doc = $(document.body)
@@ -6,7 +7,7 @@ class newTab {
     }
     //总入口
     init(){
-        feedHandler.getFeedHandle()
+        datahander.getFeed()
         this.initHandle()
     }
 }
